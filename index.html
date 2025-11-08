@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 232 - Course Home</title>
+  <meta name="description" content="Course home page for WDD 232 assignments." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <h1>My Course Planner</h1>
+      <p>BYU–Idaho • WDD 232</p>
+    </div>
+    <button id="menu-btn" aria-label="Open navigation">&#9776;</button>
+    <nav id="main-nav">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#">Assignments</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Course Home Page</h2>
+      <p>Select, filter, and track your courses.</p>
+    </section>
+
+    <section class="controls" aria-label="Course filters">
+      <h3>Filter by Subject</h3>
+      <div class="filter-buttons">
+        <button data-filter="all" class="filter-btn active">All</button>
+        <button data-filter="wdd" class="filter-btn">WDD</button>
+        <button data-filter="cse" class="filter-btn">CSE</button>
+        <button data-filter="cit" class="filter-btn">CIT</button>
+      </div>
+    </section>
+
+    <section class="courses" aria-label="Course list">
+      <h3>Courses</h3>
+      <div id="courses-container" class="courses-grid">
+        <!-- JS injects cards here -->
+      </div>
+    </section>
+
+    <section class="summary" aria-label="Course summary">
+      <div class="summary-item">
+        <h4>Total Credits:</h4>
+        <p id="total-credits">0</p>
+      </div>
+      <div class="summary-item">
+        <h4>Legend:</h4>
+        <p><span class="badge completed">Taken</span> = classes you have completed</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> | WDD 232 | Luis</p>
+    <p>Last modified: <span id="last-modified"></span></p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
