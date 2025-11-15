@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Tech Innovators",
+      "address": "123 Main St, Juarez",
+      "phone": "(656) 123-4567",
+      "website": "https://techinnovators.com",
+      "image": "member1.jpg",
+      "membership": "Gold"
+    },
+    {
+      "name": "Green Solutions",
+      "address": "456 Oak Ave",
+      "phone": "(656) 555-2345",
+      "website": "https://greensolutions.mx",
+      "image": "member2.jpg",
+      "membership": "Silver"
+    },
+    {
+      "name": "Digital Experts",
+      "address": "789 Elm St",
+      "phone": "(656) 678-9012",
+      "website": "https://digitalexperts.mx",
+      "image": "member3.jpg",
+      "membership": "Gold"
+    },
+    {
+      "name": "AutoParts Plus",
+      "address": "22 Industrial Park",
+      "phone": "(656) 101-2222",
+      "website": "https://autopartsplus.mx",
+      "image": "member4.jpg",
+      "membership": "Bronze"
+    },
+    {
+      "name": "Smart Design Studio",
+      "address": "77 Design Blvd",
+      "phone": "(656) 333-4444",
+      "website": "https://smartdesign.com",
+      "image": "member5.jpg",
+      "membership": "Gold"
+    },
+    {
+      "name": "Fresh Market",
+      "address": "12 Farmers Rd",
+      "phone": "(656) 555-7890",
+      "website": "https://freshmarket.mx",
+      "image": "member6.jpg",
+      "membership": "Silver"
+    },
+    {
+      "name": "Blue Transport",
+      "address": "90 Logistic Way",
+      "phone": "(656) 666-7777",
+      "website": "https://bluetransport.com",
+      "image": "member7.jpg",
+      "membership": "Gold"
+    }
+  ]
+}

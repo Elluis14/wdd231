@@ -1,0 +1,118 @@
+:root {
+  --primary: #004d40;
+  --light: #f1f1f1;
+  --text: #222;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--light);
+  color: var(--text);
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+#menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  display: block;
+}
+
+nav {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0.5rem 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav li.active a {
+  text-decoration: underline;
+}
+
+.controls {
+  text-align: center;
+  padding: 1rem;
+}
+
+.controls button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary);
+  background: white;
+  cursor: pointer;
+}
+
+.controls button.active {
+  background: var(--primary);
+  color: white;
+}
+
+#members-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#members-container.list article {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding: 0.75rem 1rem;
+}
+
+.member-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.member-card img {
+  max-width: 100px;
+  border-radius: 50%;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+/* Responsive nav for desktop */
+@media (min-width: 700px) {
+  #menu-btn { display: none; }
+  nav { display: block !important; }
+  nav ul { display: flex; gap: 1rem; }
+}
