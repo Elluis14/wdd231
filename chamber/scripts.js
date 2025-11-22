@@ -1,58 +1,154 @@
-// Fecha dinámica en el footer
+// FOOTER DATES
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Nav responsive
+// NAVIGATION
 const menuBtn = document.getElementById("menu-btn");
 const nav = document.getElementById("main-nav");
-menuBtn.addEventListener("click", () => {
-  nav.style.display = nav.style.display === "block" ? "none" : "block";
+
+menuBtn?.addEventListener("click", () => {
+  const open = nav.style.display === "block";
+  nav.style.display = open ? "none" : "block";
+  menuBtn.setAttribute("aria-expanded", String(!open));
 });
 
-// Async/Await para leer JSON
-async function loadMembers() {
-  const response = await fetch("members.json");
-  const data = await response.json();
-  displayMembers(data.members);
+/* ======================
+   WEATHER API
+====================== */
+
+// Tu API key
+const OWM_API_KEY = "097b388ad87bd34c6dcd3f5dcf7f6a27";
+
+// Ciudad
+const CITY = "San Miguel,SV";
+
+// Fahrenheit
+const UNITS = "imperial";
+
+async function getJSON(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
 }
 
-function displayMembers(members) {
-  const container = document.getElementById("members-container");
-  container.innerHTML = "";
+function renderWeather(container, w) {
+  const temp = Math.round(w.main.temp);
+  const desc = w.weather[0].description;
+  const icon = w.weather[0].icon;
 
-  members.forEach(member => {
-    const card = document.createElement("article");
-    card.classList.add("member-card");
-    card.innerHTML = `
-      <img src="images/${member.image}" alt="${member.name} logo">
-      <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <a href="${member.website}" target="_blank">${member.website}</a>
-      <p><strong>Level:</strong> ${member.membership}</p>
+  container.innerHTML += `
+    <div class="row">
+      <div class="card">
+        <strong>Now</strong><br>
+        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
+        <div><strong>${temp}°F</strong></div>
+        <div>${desc}</div>
+      </div>
+    </div>
+  `;
+}
+
+function pick3Days(list) {
+  const days = {};
+  list.forEach(i => {
+    const d = new Date(i.dt * 1000);
+    const dayKey = d.toISOString().slice(0,10);
+    const hour = d.getHours();
+    const diff = Math.abs(12 - hour);
+    if (!days[dayKey] || diff < days[dayKey].diff) {
+      days[dayKey] = { diff, item: i };
+    }
+  });
+
+  return Object.values(days).slice(1,4).map(d => d.item);
+}
+
+function renderForecast(container, items) {
+  const row = document.createElement("div");
+  row.className = "row";
+
+  items.forEach(d => {
+    const date = new Date(d.dt * 1000);
+    const label = date.toLocaleDateString(undefined, {
+      weekday: "short",
+      month: "short",
+      day: "numeric"
+    });
+
+    const temp = Math.round(d.main.temp);
+    const desc = d.weather[0].description;
+    const icon = d.weather[0].icon;
+
+    row.innerHTML += `
+      <div class="card">
+        <strong>${label}</strong><br>
+        <img src="https://openweathermap.org/img/wn/${icon}.png" alt="${desc}">
+        <div><strong>${temp}°F</strong></div>
+        <div>${desc}</div>
+      </div>
     `;
-    container.appendChild(card);
+  });
+
+  container.appendChild(row);
+}
+
+async function loadWeather() {
+  const box = document.getElementById("weather");
+
+  try {
+    const current = await getJSON(
+      `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${OWM_API_KEY}&units=${UNITS}`
+    );
+
+    box.innerHTML = "";
+    renderWeather(box, current);
+
+    const forecast = await getJSON(
+      `https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&appid=${OWM_API_KEY}&units=${UNITS}`
+    );
+
+    const days = pick3Days(forecast.list);
+    renderForecast(box, days);
+
+  } catch (err) {
+    console.error(err);
+    box.innerHTML = `<p class="muted">Weather unavailable.</p>`;
+  }
+}
+
+loadWeather();
+
+/* ======================
+   SPOTLIGHT
+====================== */
+
+async function loadSpotlight() {
+  const data = await getJSON("members.json");
+  const members = data.members;
+
+  const goldSilver = members.filter(m =>
+    /^(gold|silver)$/i.test(m.membership)
+  );
+
+  const shuffled = goldSilver.sort(() => Math.random() - 0.5);
+  const pickCount = Math.floor(Math.random() * 2) + 2; // 2 o 3
+  const picks = shuffled.slice(0, pickCount);
+
+  const box = document.getElementById("spotlight");
+  box.innerHTML = "";
+
+  picks.forEach(m => {
+    box.innerHTML += `
+      <article>
+        <img src="${m.image}" alt="${m.name} logo">
+        <h3>${m.name}</h3>
+        <p>${m.address}</p>
+        <p>${m.phone}</p>
+        <p><a href="${m.website}" target="_blank">Website</a></p>
+        <p><strong>${m.membership}</strong> Member</p>
+      </article>
+    `;
   });
 }
 
-// Toggle entre grid/list
-const gridBtn = document.getElementById("grid-view");
-const listBtn = document.getElementById("list-view");
-const membersContainer = document.getElementById("members-container");
-
-gridBtn.addEventListener("click", () => {
-  membersContainer.classList.add("grid");
-  membersContainer.classList.remove("list");
-  gridBtn.classList.add("active");
-  listBtn.classList.remove("active");
-});
-
-listBtn.addEventListener("click", () => {
-  membersContainer.classList.remove("grid");
-  membersContainer.classList.add("list");
-  listBtn.classList.add("active");
-  gridBtn.classList.remove("active");
-});
-
-// Cargar datos al iniciar
-loadMembers();
+loadSpotlight();

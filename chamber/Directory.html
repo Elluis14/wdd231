@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>San Miguel Chamber of Commerce</title>
+  <meta name="description" content="Welcome to the San Miguel Chamber of Commerce — connecting local businesses, events, and opportunities." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-current="page">San Miguel Chamber</a>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="main-nav" class="nav" aria-label="Main Navigation">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <picture>
+        <img src="images/hero.jpg" alt="Community and local businesses" loading="eager">
+      </picture>
+      <a class="cta" href="#join">Join the Chamber</a>
+    </section>
+
+    <!-- CURRENT EVENTS -->
+    <section class="panel">
+      <h2>Current Events</h2>
+      <ul class="events">
+        <li><strong>Dec 1:</strong> Small Business Expo – Main Plaza</li>
+        <li><strong>Dec 5:</strong> Breakfast & Networking – City Hall</li>
+        <li><strong>Dec 12:</strong> Holiday Market – Old Town</li>
+      </ul>
+    </section>
+
+    <!-- WEATHER -->
+    <section class="panel">
+      <h2>Weather</h2>
+      <div id="weather" class="weather">
+        <p class="muted">Loading weather data...</p>
+      </div>
+    </section>
+
+    <!-- SPOTLIGHT -->
+    <section class="panel">
+      <h2>Business Spotlight</h2>
+      <div id="spotlight" class="spotlight"></div>
+    </section>
+
+    <!-- JOIN -->
+    <section id="join" class="panel join">
+      <h2>Become a Member</h2>
+      <p>Grow your business with exposure, training, and community networking.</p>
+      <a href="#" class="btn">Apply Now</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> San Miguel Chamber</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts.js" type="module"></script>
+
+</body>
+</html>
+
