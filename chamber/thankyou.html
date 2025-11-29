@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank You - San Miguel Chamber</title>
+  <meta name="description" content="Thank you for joining the San Miguel Chamber of Commerce.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">San Miguel Chamber</a>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="main-nav" class="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li class="active"><a href="join.html">Join</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h1>Thank You for Joining!</h1>
+      <p>We have received your membership application with the following details:</p>
+
+      <dl class="thankyou-details">
+        <dt>First Name</dt>
+        <dd id="out-firstName"></dd>
+
+        <dt>Last Name</dt>
+        <dd id="out-lastName"></dd>
+
+        <dt>Email</dt>
+        <dd id="out-email"></dd>
+
+        <dt>Phone</dt>
+        <dd id="out-phone"></dd>
+
+        <dt>Business / Organization</dt>
+        <dd id="out-organization"></dd>
+
+        <dt>Form Submitted (Timestamp)</dt>
+        <dd id="out-timestamp"></dd>
+      </dl>
+
+      <p>We will contact you soon with more information about your membership.</p>
+      <p><a href="index.html" class="btn">Return Home</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> San Miguel Chamber</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="thankyou.js" type="module"></script>
+</body>
+</html>

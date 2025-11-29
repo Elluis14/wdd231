@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join the Chamber - San Miguel Chamber of Commerce</title>
+  <meta name="description" content="Join the San Miguel Chamber of Commerce and choose a membership level that fits your business.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">San Miguel Chamber</a>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="main-nav" class="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li class="active"><a href="join.html" aria-current="page">Join</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="join-layout">
+    <section class="panel join-intro">
+      <h1>Join the Chamber</h1>
+      <p>Choose the membership level that best supports your business and community growth.</p>
+      <p>Benefits include networking, promotion, training, and representation.</p>
+    </section>
+
+    <!-- CARDS + MODALS -->
+    <section class="panel membership-grid" aria-label="Membership levels">
+      <article class="membership-card">
+        <h2>Non-Profit</h2>
+        <p>Ideal for registered non-profit organizations.</p>
+        <p class="price">Free / Low Cost</p>
+
+        <label class="membership-select">
+          <input type="radio" name="membership" value="np" form="joinForm">
+          Select Non-Profit
+        </label>
+
+        <button type="button" class="benefits-btn" data-dialog="np-dialog">View Benefits</button>
+
+        <dialog id="np-dialog">
+          <h3>Non-Profit Benefits</h3>
+          <ul>
+            <li>Listing in chamber directory</li>
+            <li>Access to community events</li>
+            <li>Discounted training</li>
+          </ul>
+          <button type="button" class="close-dialog">Close</button>
+        </dialog>
+      </article>
+
+      <article class="membership-card">
+        <h2>Bronze</h2>
+        <p>Perfect for small businesses getting started.</p>
+        <p class="price">$120 / year</p>
+
+        <label class="membership-select">
+          <input type="radio" name="membership" value="bronze" form="joinForm">
+          Select Bronze
+        </label>
+
+        <button type="button" class="benefits-btn" data-dialog="bronze-dialog">View Benefits</button>
+
+        <dialog id="bronze-dialog">
+          <h3>Bronze Benefits</h3>
+          <ul>
+            <li>Directory listing & logo</li>
+            <li>Ribbon cutting announcement</li>
+            <li>Quarterly networking invites</li>
+          </ul>
+          <button type="button" class="close-dialog">Close</button>
+        </dialog>
+      </article>
+
+      <article class="membership-card">
+        <h2>Silver</h2>
+        <p>For growing businesses seeking more visibility.</p>
+        <p class="price">$250 / year</p>
+
+        <label class="membership-select">
+          <input type="radio" name="membership" value="silver" form="joinForm">
+          Select Silver
+        </label>
+
+        <button type="button" class="benefits-btn" data-dialog="silver-dialog">View Benefits</button>
+
+        <dialog id="silver-dialog">
+          <h3>Silver Benefits</h3>
+          <ul>
+            <li>All Bronze benefits</li>
+            <li>Featured spotlights</li>
+            <li>Priority sponsorship opportunities</li>
+          </ul>
+          <button type="button" class="close-dialog">Close</button>
+        </dialog>
+      </article>
+
+      <article class="membership-card">
+        <h2>Gold</h2>
+        <p>Maximize your impact and visibility.</p>
+        <p class="price">$500 / year</p>
+
+        <label class="membership-select">
+          <input type="radio" name="membership" value="gold" form="joinForm">
+          Select Gold
+        </label>
+
+        <button type="button" class="benefits-btn" data-dialog="gold-dialog">View Benefits</button>
+
+        <dialog id="gold-dialog">
+          <h3>Gold Benefits</h3>
+          <ul>
+            <li>All Silver benefits</li>
+            <li>Premium logo placement</li>
+            <li>Exclusive leadership events</li>
+          </ul>
+          <button type="button" class="close-dialog">Close</button>
+        </dialog>
+      </article>
+    </section>
+
+    <!-- FORM -->
+    <section class="panel join-form-panel">
+      <h2>Membership Application</h2>
+
+      <form id="joinForm" action="thankyou.html" method="get" class="join-form">
+        <!-- Hidden timestamp -->
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <div class="form-row">
+          <label for="firstName">First Name *</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            title="First name"
+            autocomplete="given-name"
+            required>
+        </div>
+
+        <div class="form-row">
+          <label for="lastName">Last Name *</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            title="Last name"
+            autocomplete="family-name"
+            required>
+        </div>
+
+        <div class="form-row">
+          <label for="title">Title / Position *</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            title="Title or position in the organization"
+            autocomplete="organization-title"
+            pattern="[A-Za-z\- ]{7,}"
+            required>
+          <small>At least 7 characters. Letters, spaces, and hyphens only.</small>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            title="Valid email address"
+            autocomplete="email"
+            placeholder="name@example.com"
+            required>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone *</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            title="Contact phone number"
+            autocomplete="tel"
+            required>
+        </div>
+
+        <div class="form-row">
+          <label for="organization">Business / Organization Name *</label>
+          <input
+            type="text"
+            id="organization"
+            name="organization"
+            title="Business or organization name"
+            autocomplete="organization"
+            required>
+        </div>
+
+        <div class="form-row">
+          <label for="description">Business Description</label>
+          <textarea
+            id="description"
+            name="description"
+            title="Brief description of your business"
+            rows="4"></textarea>
+        </div>
+
+        <fieldset class="form-row">
+          <legend>Membership Level *</legend>
+          <p class="muted">Please select a membership level from the cards above.</p>
+          <!-- Radios ya están conectados al form via form="joinForm" -->
+        </fieldset>
+
+        <button type="submit" class="btn">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> San Miguel Chamber</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="join.js" type="module"></script>
+</body>
+</html>
