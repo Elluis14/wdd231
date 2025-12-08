@@ -1,0 +1,60 @@
+{
+  "places": [
+    {
+      "title": "Historic City Center",
+      "address": "Main Plaza, San Miguel",
+      "description": "The heart of the city with colonial architecture, restaurants, and vibrant street life.",
+      "image": "images/discover1.webp",
+      "alt": "View of the main plaza with historic buildings at sunset"
+    },
+    {
+      "title": "Business Innovation Park",
+      "address": "Tech Avenue 120, Industrial Zone",
+      "description": "A growing hub for technology startups and manufacturing companies.",
+      "image": "images/discover2.webp",
+      "alt": "Modern office buildings and green areas in a business park"
+    },
+    {
+      "title": "Cultural Arts Center",
+      "address": "Art Street 45, Old Town",
+      "description": "Exhibitions, workshops, and performances that showcase local and regional talent.",
+      "image": "images/discover3.webp",
+      "alt": "Art gallery interior with paintings and people observing"
+    },
+    {
+      "title": "Riverside Park",
+      "address": "River Road S/N",
+      "description": "Green space along the river used for walking, cycling, and family activities.",
+      "image": "images/discover4.webp",
+      "alt": "Families walking along a riverside path with trees"
+    },
+    {
+      "title": "Industrial Gateway",
+      "address": "Logistics Blvd 300",
+      "description": "Strategic location for logistics, warehousing, and cross-border trade.",
+      "image": "images/discover5.webp",
+      "alt": "Cargo trucks and warehouses in an industrial area"
+    },
+    {
+      "title": "Tech Training Institute",
+      "address": "Education Avenue 88",
+      "description": "Technical school offering programs in software development, manufacturing, and design.",
+      "image": "images/discover6.webp",
+      "alt": "Students working with computers and lab equipment"
+    },
+    {
+      "title": "Market District",
+      "address": "Commerce Street 210",
+      "description": "Traditional market district with fresh produce, local products, and small businesses.",
+      "image": "images/discover7.webp",
+      "alt": "Street market stalls with fruits, vegetables, and people"
+    },
+    {
+      "title": "Residential Growth Area",
+      "address": "Hillside Neighborhood",
+      "description": "New housing developments with access to schools, parks, and services.",
+      "image": "images/discover8.webp",
+      "alt": "New residential homes in a growing neighborhood"
+    }
+  ]
+}

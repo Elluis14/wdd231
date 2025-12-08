@@ -2,439 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Plan – Radar Inmobiliario Juárez</title>
-  <meta name="description" content="Site plan for the Radar Inmobiliario Juárez project, including purpose, scenarios, color scheme, typography, and wireframes.">
-
-  <style>
-    :root {
-      --bg: #f7f7f9;
-      --text: #222222;
-      --muted: #6b7280;
-      --primary: #0b3c5d;   /* azul oscuro: headings, header, acentos */
-      --accent: #2f855a;    /* verde: botones, enlaces, detalles */
-      --card: #ffffff;
-      --border: #e2e8f0;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: var(--primary);
-      color: #ffffff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-family: "Georgia", "Times New Roman", serif;
-      font-size: 1.8rem;
-    }
-
-    header p {
-      margin: 0.25rem 0 0;
-      font-size: 0.95rem;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 1.5rem auto 2rem;
-      padding: 0 1rem 1rem;
-    }
-
-    section {
-      background-color: var(--card);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      padding: 1rem 1.25rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-    }
-
-    h2 {
-      font-family: "Georgia", "Times New Roman", serif;
-      color: var(--primary);
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: 1.4rem;
-    }
-
-    h3 {
-      font-family: "Georgia", "Times New Roman", serif;
-      color: var(--accent);
-      margin-bottom: 0.35rem;
-      margin-top: 0.75rem;
-      font-size: 1.1rem;
-    }
-
-    p {
-      margin-top: 0.25rem;
-      margin-bottom: 0.6rem;
-    }
-
-    ul {
-      padding-left: 1.25rem;
-      margin-top: 0.25rem;
-    }
-
-    .muted {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .colors-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 2fr);
-      gap: 0.75rem;
-    }
-
-    .color-swatch {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.5rem;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background-color: #f9fafb;
-    }
-
-    .color-box {
-      width: 40px;
-      height: 40px;
-      border-radius: 6px;
-      border: 1px solid #cbd5e1;
-      flex-shrink: 0;
-    }
-
-    .color-primary {
-      background-color: var(--primary);
-    }
-
-    .color-accent {
-      background-color: var(--accent);
-    }
-
-    .color-bg {
-      background-color: var(--bg);
-    }
-
-    .color-card {
-      background-color: var(--card);
-    }
-
-    .code {
-      font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.9rem;
-      background-color: #edf2f7;
-      padding: 0.15rem 0.3rem;
-      border-radius: 4px;
-    }
-
-    /* Wireframe layout */
-    .wireframes {
-      display: grid;
-      gap: 1rem;
-    }
-
-    @media (min-width: 700px) {
-      .wireframes {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    .wireframe-card {
-      border-radius: 12px;
-      border: 1px dashed var(--border);
-      padding: 0.75rem;
-      background-color: #f9fafb;
-    }
-
-    .wireframe-title {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--primary);
-    }
-
-    .wireframe-box {
-      border-radius: 8px;
-      border: 1px solid #cbd5e1;
-      background-color: #ffffff;
-      padding: 0.35rem;
-      margin-bottom: 0.35rem;
-      font-size: 0.8rem;
-      text-align: center;
-    }
-
-    .wireframe-box.hero {
-      height: 60px;
-      background: linear-gradient(to right, rgba(11, 60, 93, 0.12), rgba(47, 133, 90, 0.12));
-    }
-
-    .wireframe-box.cards-row {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.25rem;
-    }
-
-    .wireframe-box.cards-row div {
-      border: 1px dashed #cbd5e1;
-      border-radius: 6px;
-      padding: 0.35rem;
-      font-size: 0.7rem;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--muted);
-      padding: 0.75rem 1rem 1.25rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Discover San Miguel - Chamber of Commerce</title>
+  <meta name="description" content="Discover local attractions, culture, and opportunities in San Miguel with the Chamber of Commerce.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Site Plan – Radar Inmobiliario Juárez</h1>
-    <p class="muted">Individual Project Site Plan – W05</p>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">San Miguel Chamber</a>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="main-nav" class="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li class="active"><a href="discover.html" aria-current="page">Discover</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <!-- Site Name -->
-    <section>
-      <h2>1. Site Name</h2>
-      <p><strong>Proposed Site Name:</strong> Radar Inmobiliario Juárez</p>
-      <p>
-        This name reflects a data-driven platform that provides a “radar” view of the real estate market
-        in Ciudad Juárez. It suggests insight, analysis, and up-to-date information for buyers, sellers,
-        and investors.
+  <main class="discover-layout">
+    <!-- Mensaje de última visita (localStorage) -->
+    <section class="panel visit-panel">
+      <h1>Discover San Miguel</h1>
+      <p id="visit-message" class="muted">
+        Checking your last visit...
       </p>
-      <p class="muted"><strong>Optional domain idea:</strong> radarjuarez.com</p>
+      <p>
+        Explore key locations, landmarks, and neighborhoods that make San Miguel a great place to live, work, and invest.
+      </p>
     </section>
 
-    <!-- Site Purpose -->
-    <section>
-      <h2>2. Site Purpose</h2>
-      <p>
-        The purpose of the site is to present clear, visual, and data-based insights into the real estate
-        market in Ciudad Juárez. The site will:
-      </p>
-      <ul>
-        <li>Show neighborhood-level data such as average home prices and price-per-square-meter.</li>
-        <li>Provide charts and simple dashboards with trends over time and basic indicators.</li>
-        <li>Offer forms for users to request personalized PDF or online reports about specific colonias.</li>
-      </ul>
-    </section>
-
-    <!-- Scenarios -->
-    <section>
-      <h2>3. Scenarios</h2>
-      <p>The following questions represent typical visitors and help define the website content:</p>
-      <ul>
-        <li>
-          <strong>Scenario 1:</strong> “I want to buy a house in Juárez but I don’t know the city well.
-          Which areas are more affordable and how have prices changed recently?”
-        </li>
-        <li>
-          <strong>Scenario 2:</strong> “I am an investor looking for rental property. Where can I see
-          the best expected rental yield by area?”
-        </li>
-        <li>
-          <strong>Scenario 3:</strong> “Can I download or receive a report for one specific colonia with
-          current average prices, trends, and basic risk indicators?”
-        </li>
-      </ul>
-    </section>
-
-    <!-- Color Scheme -->
-    <section>
-      <h2>4. Color Scheme</h2>
-      <p>
-        The color scheme is designed to feel professional, analytical, and trustworthy. The colors here
-        are used in this document and will also be applied to the final site.
-      </p>
-
-      <div class="colors-grid">
-        <div class="color-swatch">
-          <div class="color-box color-primary"></div>
-          <div>
-            <strong>Primary – Navy Blue</strong><br>
-            Hex: <span class="code">#0b3c5d</span><br>
-            Usage: header background, main headings, primary buttons or key links.
-          </div>
-        </div>
-
-        <div class="color-swatch">
-          <div class="color-box color-accent"></div>
-          <div>
-            <strong>Accent – Emerald Green</strong><br>
-            Hex: <span class="code">#2f855a</span><br>
-            Usage: accent buttons, highlighted labels, call-to-action elements.
-          </div>
-        </div>
-
-        <div class="color-swatch">
-          <div class="color-box color-bg"></div>
-          <div>
-            <strong>Background – Light Gray</strong><br>
-            Hex: <span class="code">#f7f7f9</span><br>
-            Usage: page background to separate content from the edges of the viewport.
-          </div>
-        </div>
-
-        <div class="color-swatch">
-          <div class="color-box color-card"></div>
-          <div>
-            <strong>Card – White</strong><br>
-            Hex: <span class="code">#ffffff</span><br>
-            Usage: content panels, cards, data blocks, and sections with shadows.
-          </div>
-        </div>
+    <!-- Grid de tarjetas generadas desde JSON -->
+    <section class="panel discover-grid-panel">
+      <h2>Featured Places</h2>
+      <div id="discover-grid" class="discover-grid" aria-live="polite">
+        <!-- Las tarjetas se insertan aquí con JS -->
       </div>
-
-      <p class="muted">
-        In this site plan document, the header, headings, background, and section cards are already using
-        the colors defined in this scheme.
-      </p>
-    </section>
-
-    <!-- Typography -->
-    <section>
-      <h2>5. Typography</h2>
-      <p>
-        Two main font families will be used to keep the design simple and consistent.
-        The same fonts are already in use in this document.
-      </p>
-
-      <h3>Main Body Font</h3>
-      <p>
-        <strong>Font:</strong> system-ui, Segoe UI, sans-serif<br>
-        <strong>Usage:</strong> body text, paragraphs, navigation, lists, labels, and small UI text.
-      </p>
-
-      <h3>Heading Font</h3>
-      <p>
-        <strong>Font:</strong> Georgia, serif<br>
-        <strong>Usage:</strong> main page titles (<span class="code">&lt;h1&gt;</span>) and section
-        headings (<span class="code">&lt;h2&gt;</span> and <span class="code">&lt;h3&gt;</span>) to give
-        the interface a more editorial and trustworthy tone.
-      </p>
-
-      <p class="muted">
-        In this site plan, the header, section titles, and subheadings use the Georgia serif stack,
-        while the body text uses the system UI stack, demonstrating how typography will look on the final site.
-      </p>
-    </section>
-
-    <!-- Wireframe -->
-    <section>
-      <h2>6. Wireframe – Home Page Layout</h2>
-      <p>
-        The following wireframes describe the planned layout for the home page of Radar Inmobiliario Juárez.
-        One version is for mobile and the other for a wider (desktop/tablet) viewport. Boxes represent content
-        areas, not final visual design.
-      </p>
-
-      <div class="wireframes">
-        <!-- Mobile -->
-        <div class="wireframe-card">
-          <div class="wireframe-title">Mobile View (≈ 360–480px)</div>
-
-          <div class="wireframe-box">Header with logo and hamburger navigation</div>
-
-          <div class="wireframe-box hero">
-            Hero: title + short description + main call-to-action button
-          </div>
-
-          <div class="wireframe-box">
-            Brief explanation: “How Radar Inmobiliario works”.
-          </div>
-
-          <div class="wireframe-box">
-            Vertical list of “Featured Neighborhoods” (cards with name + price indicator).
-          </div>
-
-          <div class="wireframe-box">
-            “Market Insights” section: simple list of latest updates or short articles.
-          </div>
-
-          <div class="wireframe-box">
-            CTA block: “Request a custom report” with a simple button.
-          </div>
-
-          <div class="wireframe-box">
-            Footer with contact info and basic links.
-          </div>
-        </div>
-
-        <!-- Desktop -->
-        <div class="wireframe-card">
-          <div class="wireframe-title">Desktop / Tablet View (≥ 900px)</div>
-
-          <div class="wireframe-box">
-            Header: left-aligned logo, right-aligned horizontal navigation.
-          </div>
-
-          <div class="wireframe-box hero">
-            Two columns: left = hero text and CTA; right = small map or data graphic preview.
-          </div>
-
-          <div class="wireframe-box cards-row">
-            <div>Neighborhood Card 1</div>
-            <div>Neighborhood Card 2</div>
-            <div>Neighborhood Card 3</div>
-          </div>
-
-          <div class="wireframe-box">
-            2-column section: left = “Latest Insights”; right = “Key Indicators” mini dashboard.
-          </div>
-
-          <div class="wireframe-box">
-            Wide CTA strip with short text and button: “Get your personalized report”.
-          </div>
-
-          <div class="wireframe-box">
-            Footer with multiple columns: contact, links, legal information.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Validation / Notes -->
-    <section>
-      <h2>7. Validation & Best Practices</h2>
-      <p>
-        This site plan is intended to validate using the following tools:
-      </p>
-      <ul>
-        <li>HTML Validation: W3C Markup Validator</li>
-        <li>Accessibility: WAVE Web Accessibility Evaluation Tool</li>
-        <li>Performance, Best Practices, &amp; SEO: Chrome DevTools Lighthouse</li>
-        <li>Color Contrast: WebAIM Contrast Checker, using the color scheme defined above</li>
-      </ul>
-      <p class="muted">
-        The site plan is a living document and may be updated as the project is implemented
-        and additional feedback is gathered.
-      </p>
     </section>
   </main>
 
-  <footer>
-    &copy; <span id="year"></span> Radar Inmobiliario Juárez – Site Plan
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> San Miguel Chamber</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script>
-    // Simple footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="discover.js" type="module"></script>
 </body>
 </html>
