@@ -33,7 +33,7 @@
       <p>Benefits include networking, promotion, training, and representation.</p>
     </section>
 
-    <!-- CARDS + MODALS -->
+    <!-- MEMBERSHIP CARDS + MODALS -->
     <section class="panel membership-grid" aria-label="Membership levels">
       <article class="membership-card">
         <h2>Non-Profit</h2>
@@ -41,7 +41,7 @@
         <p class="price">Free / Low Cost</p>
 
         <label class="membership-select">
-          <input type="radio" name="membership" value="np" form="joinForm">
+          <input type="radio" name="membership" value="np" form="joinForm" required>
           Select Non-Profit
         </label>
 
@@ -217,7 +217,6 @@
         <fieldset class="form-row">
           <legend>Membership Level *</legend>
           <p class="muted">Please select a membership level from the cards above.</p>
-          <!-- Radios ya están conectados al form via form="joinForm" -->
         </fieldset>
 
         <button type="submit" class="btn">Submit Application</button>
