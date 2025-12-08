@@ -310,3 +310,25 @@ dialog h3 {
 .thankyou-details dd {
   margin: 0;
 }
+
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-text {
+  position: absolute;
+  inset: auto 1.5rem 1.5rem 1.5rem;
+  color: #ffffff;
+  max-width: 20rem;
+}
+
+.hero-text h1 {
+  margin: 0 0 .25rem;
+  font-size: 1.5rem;
+}
+
+.hero-text p {
+  margin: 0 0 .5rem;
+  font-size: 0.95rem;
+}
