@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar Inmobiliario Juárez – Listings</title>
+
+  <meta name="description" content="Browse dynamic property listings and neighborhood data for Ciudad Juárez.">
+  <meta name="author" content="Luis Angel Ramos">
+
+  <meta property="og:title" content="Radar Inmobiliario Juárez – Listings">
+  <meta property="og:description" content="Dynamic, data-driven listings for the Ciudad Juárez real estate market.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elluis14.github.io/wdd231/final/listings.html">
+  <meta property="og:image" content="images/hero.webp">
+
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">Radar Inmobiliario Juárez</a>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="main-nav" class="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="listings.html" aria-current="page">Listings</a></li>
+        <li><a href="reports.html">Reports</a></li>
+        <li><a href="attributions.html">Attributions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h1>Neighborhood Listings and Indicators</h1>
+      <p>Use the filters to explore at least fifteen properties with key data such as price, price per square meter, neighborhood, and basic indicators.</p>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="panel filters">
+      <h2>Filters</h2>
+      <form id="filtersForm">
+        <div class="form-row-inline">
+          <label for="neighborhoodFilter">Neighborhood</label>
+          <select id="neighborhoodFilter" name="neighborhood">
+            <option value="all">All neighborhoods</option>
+          </select>
+        </div>
+
+        <div class="form-row-inline">
+          <label for="minPrice">Min price (MXN)</label>
+          <input type="number" id="minPrice" name="minPrice" min="0" placeholder="0">
+        </div>
+
+        <div class="form-row-inline">
+          <label for="maxPrice">Max price (MXN)</label>
+          <input type="number" id="maxPrice" name="maxPrice" min="0" placeholder="4000000">
+        </div>
+
+        <div class="form-row-inline">
+          <label for="sortBy">Sort by</label>
+          <select id="sortBy" name="sortBy">
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="sqm-asc">Price per m²: Low to High</option>
+            <option value="sqm-desc">Price per m²: High to Low</option>
+          </select>
+        </div>
+
+        <button type="button" id="applyFilters" class="btn">Apply Filters</button>
+        <button type="button" id="resetFilters" class="btn-secondary">Reset</button>
+      </form>
+    </section>
+
+    <!-- LISTINGS GRID -->
+    <section class="panel">
+      <h2>Results</h2>
+      <p id="resultsCount" class="muted">Loading data…</p>
+      <div id="propertiesGrid" class="card-grid">
+        <!-- Property cards are injected by JavaScript using data/properties.json -->
+      </div>
+    </section>
+
+    <!-- MODAL DIALOG FOR DETAILS -->
+    <dialog id="propertyDialog">
+      <article>
+        <button id="closeDialog" class="dialog-close" type="button">✕</button>
+        <h2 id="dialogTitle"></h2>
+        <p id="dialogBody"></p>
+      </article>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Radar Inmobiliario Juárez</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p><a href="https://youtu.be/your-video-here" target="_blank" rel="noopener">Project Video Demonstration</a></p>
+  </footer>
+
+  <script src="js/listings.js" type="module"></script>
+</body>
+</html>

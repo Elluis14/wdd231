@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar Inmobiliario Juárez – Thank You</title>
+
+  <meta name="description" content="Confirmation page for the custom neighborhood report request.">
+  <meta name="author" content="Luis Angel Ramos">
+
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">Radar Inmobiliario Juárez</a>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="main-nav" class="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="reports.html">Reports</a></li>
+        <li><a href="attributions.html">Attributions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="panel">
+    <h1>Thank You for Your Request</h1>
+    <p>Here is a summary of the information you submitted:</p>
+
+    <dl class="summary-list">
+      <dt>First Name</dt>
+      <dd id="summaryFirstName"></dd>
+
+      <dt>Last Name</dt>
+      <dd id="summaryLastName"></dd>
+
+      <dt>Email</dt>
+      <dd id="summaryEmail"></dd>
+
+      <dt>Phone</dt>
+      <dd id="summaryPhone"></dd>
+
+      <dt>Neighborhood</dt>
+      <dd id="summaryNeighborhood"></dd>
+
+      <dt>Property Type</dt>
+      <dd id="summaryPropertyType"></dd>
+
+      <dt>Budget (MXN)</dt>
+      <dd id="summaryBudget"></dd>
+
+      <dt>Additional Comments</dt>
+      <dd id="summaryNotes"></dd>
+
+      <dt>Request Date &amp; Time</dt>
+      <dd id="summaryTimestamp"></dd>
+    </dl>
+
+    <p>If any information is incorrect, please go back and submit the form again.</p>
+    <a href="reports.html" class="btn">Back to Report Form</a>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Radar Inmobiliario Juárez</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p><a href="https://youtu.be/your-video-here" target="_blank" rel="noopener">Project Video Demonstration</a></p>
+  </footer>
+
+  <script src="js/thankyou.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar Inmobiliario Juárez – Custom Report</title>
+
+  <meta name="description" content="Request a custom neighborhood report for the Ciudad Juárez real estate market.">
+  <meta name="author" content="Luis Angel Ramos">
+
+  <meta property="og:title" content="Radar Inmobiliario Juárez – Custom Report">
+  <meta property="og:description" content="Get a tailored neighborhood report with prices, trends, and indicators.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elluis14.github.io/wdd231/final/reports.html">
+  <meta property="og:image" content="images/hero.webp">
+
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">Radar Inmobiliario Juárez</a>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="main-nav" class="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li class="active"><a href="reports.html" aria-current="page">Reports</a></li>
+        <li><a href="attributions.html">Attributions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="join-layout">
+    <section class="panel">
+      <h1>Request a Custom Neighborhood Report</h1>
+      <p>Fill out this form and we will generate a personalized report with average prices, trends, and simple indicators for the neighborhood you choose.</p>
+    </section>
+
+    <section class="panel join-form-panel">
+      <h2>Report Request Form</h2>
+
+      <form id="reportForm" action="thankyou.html" method="get" class="join-form">
+        <!-- Hidden timestamp for grading requirement -->
+        <input type="hidden" id="timestamp" name="timestamp">
+
+        <div class="form-row">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+        </div>
+
+        <div class="form-row">
+          <label for="neighborhood">Neighborhood (colonia) *</label>
+          <input type="text" id="neighborhood" name="neighborhood" required placeholder="Example: Campestre, Las Torres">
+        </div>
+
+        <div class="form-row">
+          <label for="propertyType">Property Type *</label>
+          <select id="propertyType" name="propertyType" required>
+            <option value="">Select an option</option>
+            <option value="house">House</option>
+            <option value="apartment">Apartment</option>
+            <option value="land">Land / Lot</option>
+            <option value="mixed">Mixed use</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="budget">Approximate Budget (MXN)</label>
+          <input type="number" id="budget" name="budget" min="0" placeholder="1500000">
+        </div>
+
+        <div class="form-row">
+          <label for="notes">Additional Comments</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Describe what you are looking for or your main questions."></textarea>
+        </div>
+
+        <button type="submit" class="btn">Submit Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Radar Inmobiliario Juárez</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p><a href="https://youtu.be/your-video-here" target="_blank" rel="noopener">Project Video Demonstration</a></p>
+  </footer>
+
+  <script src="js/report.js" type="module"></script>
+</body>
+</html>

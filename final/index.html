@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar Inmobiliario Juárez – Home</title>
+
+  <meta name="description" content="Radar Inmobiliario Juárez is a data-driven view of the real estate market in Ciudad Juárez. Explore neighborhoods, indicators, and insights.">
+  <meta name="author" content="Luis Angel Ramos">
+
+  <!-- Social / Open Graph -->
+  <meta property="og:title" content="Radar Inmobiliario Juárez">
+  <meta property="og:description" content="Data and insight for the real estate market in Ciudad Juárez.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elluis14.github.io/wdd231/final/index.html">
+  <meta property="og:image" content="images/hero.webp">
+
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-current="page">
+      Radar Inmobiliario Juárez
+    </a>
+
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="main-nav" class="nav" aria-label="Main navigation">
+      <ul>
+        <li class="active"><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="listings.html">Listings</a></li>
+        <li><a href="reports.html">Reports</a></li>
+        <li><a href="attributions.html">Attributions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <picture>
+        <img src="images/hero.webp" alt="City skyline and residential area in Juárez" loading="eager">
+      </picture>
+      <div class="hero-text">
+        <h1>Real Estate Radar for Ciudad Juárez</h1>
+        <p>Explore neighborhood prices, trends, and key indicators before you buy or invest.</p>
+        <a class="cta" href="reports.html">Request a Custom Report</a>
+      </div>
+    </section>
+
+    <!-- VISIT MESSAGE (localStorage) -->
+    <section class="panel">
+      <h2>Your Visit</h2>
+      <p id="visitMessage" class="muted"></p>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="panel">
+      <h2>How Radar Inmobiliario Works</h2>
+      <p>We collect and summarize data from listings, public records, and local sources to create a simple, visual view of the market in Ciudad Juárez.</p>
+      <ul class="bullets">
+        <li>Compare neighborhoods with average price and price per square meter.</li>
+        <li>See basic indicators such as rental potential and demand level.</li>
+        <li>Request a tailored PDF report for a specific neighborhood.</li>
+      </ul>
+    </section>
+
+    <!-- FEATURED NEIGHBORHOODS -->
+    <section class="panel">
+      <h2>Featured Neighborhoods</h2>
+      <div id="featured-neighborhoods" class="card-grid">
+        <!-- Cards are injected by JavaScript using the JSON data -->
+      </div>
+    </section>
+
+    <!-- MARKET INSIGHTS -->
+    <section class="panel">
+      <h2>Market Insights</h2>
+      <ul class="insights">
+        <li><strong>Price growth:</strong> Some mid-range neighborhoods have shown steady growth in the last 12 months.</li>
+        <li><strong>Rental demand:</strong> Areas near main industrial zones tend to show higher rental demand.</li>
+        <li><strong>Opportunities:</strong> Outskirts with new developments may offer better long-term appreciation.</li>
+      </ul>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="panel cta-strip">
+      <h2>Need a Detailed Neighborhood Report?</h2>
+      <p>Get a clear summary of prices, trends, and basic risks for one specific colonia.</p>
+      <a href="reports.html" class="btn">Get Your Report</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Radar Inmobiliario Juárez</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p><a href="https://youtu.be/your-video-here" target="_blank" rel="noopener">Project Video Demonstration</a></p>
+  </footer>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
