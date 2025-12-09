@@ -11,7 +11,7 @@
       "beds": 3,
       "baths": 2,
       "rentalYield": 6.5,
-      "image": "images/property1.webp",
+      "image": "images/property1.JPG",
       "description": "Well-located single-family home with quick access to main avenues and schools."
     },
     {
@@ -25,7 +25,7 @@
       "beds": 2,
       "baths": 1,
       "rentalYield": 7.2,
-      "image": "images/property2.webp",
+      "image": "images/property2.JPG",
       "description": "Compact apartment ideal for first-time buyers or rental investment."
     },
     {
@@ -39,7 +39,7 @@
       "beds": 0,
       "baths": 0,
       "rentalYield": 0,
-      "image": "images/property3.webp",
+      "image": "images/property3.JPG",
       "description": "Empty lot in a growing area with potential for residential development."
     },
     {
@@ -53,7 +53,7 @@
       "beds": 3,
       "baths": 2,
       "rentalYield": 8.1,
-      "image": "images/property4.webp",
+      "image": "images/property4.JPG",
       "description": "Townhouse with strong rental demand due to proximity to industrial parks."
     },
     {
@@ -67,7 +67,7 @@
       "beds": 2,
       "baths": 2,
       "rentalYield": 7.8,
-      "image": "images/property5.webp",
+      "image": "images/property5.JPG",
       "description": "Renovated unit with modern finishes and access to services in downtown area."
     },
     {
@@ -81,7 +81,7 @@
       "beds": 2,
       "baths": 1,
       "rentalYield": 6.0,
-      "image": "images/property6.webp",
+      "image": "images/property6.JPG",
       "description": "Affordable home with basic finishes, good for entry-level buyers."
     },
     {
@@ -95,7 +95,7 @@
       "beds": 3,
       "baths": 2,
       "rentalYield": 7.0,
-      "image": "images/property7.webp",
+      "image": "images/property7.JPG",
       "description": "Two-level duplex suitable for living and renting part of the space."
     },
     {
@@ -109,7 +109,7 @@
       "beds": 3,
       "baths": 2,
       "rentalYield": 7.4,
-      "image": "images/property8.webp",
+      "image": "images/property8.JPG",
       "description": "Condo with amenities and security, attractive for professionals."
     },
     {
@@ -123,7 +123,7 @@
       "beds": 0,
       "baths": 0,
       "rentalYield": 0,
-      "image": "images/property9.webp",
+      "image": "images/property9.JPG",
       "description": "Corner lot close to main boulevard, potential for commercial or mixed use."
     },
     {
@@ -137,7 +137,7 @@
       "beds": 3,
       "baths": 2,
       "rentalYield": 6.8,
-      "image": "images/property10.webp",
+      "image": "images/property10.JPG",
       "description": "Three-bedroom home close to schools and basic services."
     },
     {
@@ -151,7 +151,7 @@
       "beds": 2,
       "baths": 1,
       "rentalYield": 8.3,
-      "image": "images/property11.webp",
+      "image": "images/property11.JPG",
       "description": "Good option for student housing with strong rental market."
     },
     {
@@ -165,7 +165,7 @@
       "beds": 3,
       "baths": 2,
       "rentalYield": 6.9,
-      "image": "images/property12.webp",
+      "image": "images/property12.JPG",
       "description": "Residential area with moderate appreciation and family-oriented environment."
     },
     {
@@ -179,7 +179,7 @@
       "beds": 2,
       "baths": 1,
       "rentalYield": 5.9,
-      "image": "images/property13.webp",
+      "image": "images/property13.JPG",
       "description": "Entry-level property in a large housing development on the outskirts."
     },
     {
@@ -193,7 +193,7 @@
       "beds": 2,
       "baths": 2,
       "rentalYield": 8.0,
-      "image": "images/property14.webp",
+      "image": "images/property14.JPG",
       "description": "Ground floor suitable for small business with residential space above."
     },
     {
@@ -207,7 +207,7 @@
       "beds": 3,
       "baths": 2,
       "rentalYield": 6.3,
-      "image": "images/property15.webp",
+      "image": "images/property15.JPG",
       "description": "Neighborhood with access to public transportation and basic services."
     }
   ]
