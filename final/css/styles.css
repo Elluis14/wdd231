@@ -163,10 +163,19 @@ main {
   box-shadow: var(--shadow-soft);
 }
 
-.panel h1,
-.panel h2 {
+h1 {
   font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
   margin-top: 0;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 .bullets {
