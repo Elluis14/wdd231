@@ -1,5 +1,11 @@
 // Common layout behavior for all pages
 export function initCommon() {
+
+  let visits = Number(localStorage.getItem('visits')) || 0;
+  visits += 1;
+  localStorage.setItem('visits', visits);
+  console.log("User visits:", visits);
+  
   // Responsive navigation (hamburger)
   const menuBtn = document.querySelector('#menu-btn');
   const nav = document.querySelector('#main-nav');
