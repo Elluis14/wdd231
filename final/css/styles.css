@@ -163,18 +163,19 @@ main {
   box-shadow: var(--shadow-soft);
 }
 
-h1 {
+.panel h1,
+.panel h2 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.75rem;
   margin-top: 0;
 }
 
-h2 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.5rem;
+/* Añade esto (o ajusta así directamente la regla de arriba): */
+
+.panel h1 {
+  font-size: 1.5rem;   /* o 1.75rem si quieres más grande */
 }
 
-h3 {
+.panel h2 {
   font-size: 1.25rem;
 }
 
